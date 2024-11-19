@@ -25,8 +25,9 @@ const printWeather = (res, icon) => {
     dedent`${chalk.bgBlue(" WEATHER ")} Погода в городе ${res.name}
   ${icon}  ${res.weather[0].description}
   Температура: ${res.main.temp}°C (ощущается как ${res.main.feels_like}°C)
+  Давление: ${res.main.pressure} мм рт. ст.
   Влажность: ${res.main.humidity}%
-  Скорость ветра: ${res.wind.speed}м/с
+  Скорость ветра: ${res.wind.speed} м/с, порывы до ${res.wind.gust} м/с
  `
   );
 };
